@@ -36,9 +36,8 @@ After=network.target
 
 [Service]
 Type=forking
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/lib/jvm/java-17-openjdk-17.0.16.0.8-2.el8.x86_64/bin:/usr/local/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/lib/jvm/java-17-openjdk-17.0.16.0.8-2.el8.x86_64/bin"
 ExecStart=/usr/local/bin/bankapp-shell-script.sh start
-ExecStop=/usr/local/bin/bankapp-shell-script.sh stop
 User=root
 Restart=on-failure
 
@@ -49,4 +48,5 @@ END_FOR_SCRIPT
 systemctl daemon-reload
 systemctl enable bankapp
 systemctl start bankapp
+
 systemctl status bankapp
