@@ -48,5 +48,5 @@ END_FOR_SCRIPT
 systemctl daemon-reload
 systemctl enable bankapp
 systemctl start bankapp
-
 systemctl status bankapp
+
